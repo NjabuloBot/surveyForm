@@ -9,8 +9,24 @@
         <p id="description">Please fill out this survey form to help Dbug to better improve their services</p>
         <form id="survey-form" method="post" action="./">
             <fieldset>
-                <label for="name">
-                    <input name="nameAndSurname" id="name" type="text">
+                <label for="name-label">Name
+                    <input required name="nameAndSurname" id="name-label" type="text" placeholder="Enter your full name">
+                </label>
+                <label for="email-label">Email
+                    <input required type="text" id="email-label" name="userEmail" placeholder="Enter your email">
+                </label>
+                <label for="number-label">Age(optional)
+                    <input required type="number" id="number-label" name="userAge" placeholder="Age" min="13" max="100">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label>Which option best describes you?
+                    <select id="dropdown">
+                        <option>Select current Role</option>
+                        <option>Student</option>
+                        <option>Employeed</option>
+                        <option>Other</option>
+                    </select>
                 </label>
             </fieldset>
         </form>
