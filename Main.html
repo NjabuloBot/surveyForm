@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <h1 id="title">Dbug Survey Form</h1>
-        <p id="description">Please fill out this survey form to help Dbug to better improve their services</p>
+        <p id="description">Please fill out this survey form to <br>help Dbug improve their services</p>
         <form id="survey-form" method="post" action="./">
             <fieldset>
                 <label for="name-label">Name
@@ -20,15 +21,48 @@
                 </label>
             </fieldset>
             <fieldset>
-                <label>Which option best describes you?
-                    <select id="dropdown">
-                        <option>Select current Role</option>
-                        <option>Student</option>
-                        <option>Employeed</option>
-                        <option>Other</option>
+                <label for="dropdown">Which option best describes you?
+                    <select id="dropdown" class="inline">
+                        <option value=" ">Select current Role</option>
+                        <option value="1">Student</option>
+                        <option value="2">Employeed</option>
+                        <option value="3">Other</option>
                     </select>
                 </label>
             </fieldset>
+            <fieldset >Would you recommend Dbug to a friend?
+                <label for="Definitely" >
+                    <input class="inline" type="radio" id="Definitely" name="reco">Definitely
+                </label>
+                <label for="Not Sure">
+                    <input class="inline" type="radio" id="Not Sure" name="reco">Not sure 
+                </label>
+                <label for="Maybe">
+                    <input class="inline" type="radio" id="Maybe" name="reco">Maybe
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="interviews">
+                    <input  class="inline" value="1" type="checkbox" id="interviews" name="Interviews">Coding Interviews
+                </label>
+                <label for="projects">    
+                    <input  class="inline" value="2" type="checkbox" id="projects" name="Projects">Git Projects
+                </label>
+                <label for="courses">    
+                    <input  class="inline" value="3" type="checkbox" id="courses" name="Courses">Courses
+                </label>
+                <label for="challenges">    
+                    <input  class="inline" value="4" type="checkbox" id="challenges" name="Challenges">Challenges
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="comments">Any comments or suggestions?
+                    <textarea id="comments" name="comments" rows="4" cols="40">
+
+                    </textarea>
+                </label>
+            </fieldset>
+            <input id="submit" type="submit" value="Submit">
         </form>
     </body>
 </html>
